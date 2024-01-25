@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesCatalog.Infra.IoC", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesCatalog.WebUI", "MoviesCatalog.WebUI\MoviesCatalog.WebUI.csproj", "{89B7A47C-F528-477D-B49B-FFAEE66F5859}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesCatalog.Domain.Tests", "MoviesCatalog.Domain.Tests\MoviesCatalog.Domain.Tests.csproj", "{043255FF-9CEF-4A64-9517-91F34AB4DD7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{89B7A47C-F528-477D-B49B-FFAEE66F5859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89B7A47C-F528-477D-B49B-FFAEE66F5859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89B7A47C-F528-477D-B49B-FFAEE66F5859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043255FF-9CEF-4A64-9517-91F34AB4DD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043255FF-9CEF-4A64-9517-91F34AB4DD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043255FF-9CEF-4A64-9517-91F34AB4DD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043255FF-9CEF-4A64-9517-91F34AB4DD7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
