@@ -6,4 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MoviesCatalog.Infra.IoC\MoviesCatalog.Infra.IoC.csproj" />
+    </ItemGroup>
+
 </Project>

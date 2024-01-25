@@ -6,4 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MoviesCatalog.Application\MoviesCatalog.Application.csproj" />
+      <ProjectReference Include="..\MoviesCatalog.Domain\MoviesCatalog.Domain.csproj" />
+      <ProjectReference Include="..\MoviesCatalog.Infra.Data\MoviesCatalog.Infra.Data.csproj" />
+    </ItemGroup>
+
 </Project>
