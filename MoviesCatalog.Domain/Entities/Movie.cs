@@ -40,7 +40,7 @@ public sealed class Movie : BaseEntity
         
         
         DomainExceptionValidation.When(string.IsNullOrEmpty(description), 
-            "Invalid title.\nDescription is required");
+            "Invalid description.\nDescription is required");
         
         DomainExceptionValidation.When(description.Length < 5, 
             "Invalid description.\nDescription is too short, minimum 5 characters");
