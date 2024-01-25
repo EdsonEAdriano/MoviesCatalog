@@ -7,7 +7,7 @@ public sealed class Movie : BaseEntity
     public string Title { get; private set; }
     public string Description { get; private set; }
     public DateOnly ReleaseDate { get; private set; }
-    public string ImagePath { get; private set; }
+    public string? ImagePath { get; private set; }
 
 
     public Movie(string title, string description, DateOnly releaseDate, string imagePath) : base()
@@ -47,7 +47,7 @@ public sealed class Movie : BaseEntity
         
         
         
-        DomainExceptionValidation.When(imagePath.Length > 250, 
+        DomainExceptionValidation.When(imagePath?.Length > 250, 
             "Invalid image path.\nImage Path is too long, maximum 250 characters");
 
         Title = title;
