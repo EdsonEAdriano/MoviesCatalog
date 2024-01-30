@@ -10,4 +10,8 @@
       <ProjectReference Include="..\MoviesCatalog.Infra.IoC\MoviesCatalog.Infra.IoC.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <AdditionalFiles Include="Views\Categories\Index.cshtml" />
+    </ItemGroup>
+
 </Project>
