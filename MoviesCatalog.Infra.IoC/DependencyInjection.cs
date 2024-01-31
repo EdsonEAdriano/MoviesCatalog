@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MoviesCatalog.Application.Interfaces;
@@ -26,6 +27,9 @@ public static class DependencyInjection
         services.AddScoped<IMovieService, MovieService>();
 
         services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
+
+        var myhandlers = AppDomain.CurrentDomain.Load("MoviesCatalog.Application");
+        services.AddMediatR(myhandlers);
         
         return services;
     }
