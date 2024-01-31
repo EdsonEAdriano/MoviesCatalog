@@ -21,7 +21,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
             .ToArrayAsync();
     }
 
-    public async Task<T> GetAsync(int? id)
+    public virtual async Task<T> GetAsync(int? id)
     {
         return await _context
             .Set<T>()
