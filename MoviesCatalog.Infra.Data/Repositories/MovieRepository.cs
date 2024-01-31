@@ -9,8 +9,8 @@ public class MovieRepository : BaseRepository<Movie>, IMovieRepository
 {
     public MovieRepository(ApplicationDbContext context) : base(context)
     { }
-    
-    public async Task<Movie> GetMovieCategoryAsync(int? id)
+
+    public override async Task<Movie> GetAsync(int? id)
     {
         return await _context
             .Movies
