@@ -8,7 +8,9 @@ public sealed class Movie : BaseEntity
     public string Description { get; private set; }
     public DateOnly ReleaseDate { get; private set; }
     public string? ImagePath { get; private set; }
-
+    
+    public int CategoryId { get; set; }
+    public Category Category { get; set; }
 
     public Movie(string title, string description, DateOnly releaseDate, string imagePath) : base()
     {
@@ -55,7 +57,4 @@ public sealed class Movie : BaseEntity
         ReleaseDate = releaseDate;
         ImagePath = imagePath;
     }
-    
-    public int CategoryId { get; set; }
-    public Category Category { get; set; }
 }
