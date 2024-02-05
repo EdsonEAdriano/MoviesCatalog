@@ -1,0 +1,33 @@
+﻿@model MoviesCatalog.Application.DTOs.MovieDTO
+
+<h3>Movie Details</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Title)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Title)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Description)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Description)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.ImagePath)</dt>
+        <dd class="col-sm-10">
+            @if (!ViewBag.ImageExist)
+            {
+                <img src="~/images/NoImage.png" class="rounded-circle" 
+                     height="300" width="300" asp-append-version="true" />
+            }
+            else
+            {
+                <img src="~/images/@Model.ImagePath" class="rounded-circle" 
+                     height="300" width="300" asp-append-version="true" />
+            }
+        </dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.ReleaseDate)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.ReleaseDate)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Category)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Category.Name)</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
