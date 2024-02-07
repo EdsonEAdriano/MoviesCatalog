@@ -15,4 +15,8 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MoviesCatalog.Infra.IoC\MoviesCatalog.Infra.IoC.csproj" />
+  </ItemGroup>
+
 </Project>
