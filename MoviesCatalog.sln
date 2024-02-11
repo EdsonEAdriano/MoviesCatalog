@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesCatalog.WebUI", "Movi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesCatalog.Domain.Tests", "MoviesCatalog.Domain.Tests\MoviesCatalog.Domain.Tests.csproj", "{043255FF-9CEF-4A64-9517-91F34AB4DD7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesCatalog.API", "MoviesCatalog.API\MoviesCatalog.API.csproj", "{3EE7E8BC-1DEC-4D3E-A096-414AE1881697}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesCatalog.WebAPI", "MoviesCatalog.WebAPI\MoviesCatalog.WebAPI.csproj", "{3EE7E8BC-1DEC-4D3E-A096-414AE1881697}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
