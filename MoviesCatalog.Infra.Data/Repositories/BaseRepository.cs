@@ -25,7 +25,8 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         return await _context
             .Set<T>()
-            .FindAsync(id);
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.Id == id);
     }
 
     public async Task<T> CreateAsync(T entity)

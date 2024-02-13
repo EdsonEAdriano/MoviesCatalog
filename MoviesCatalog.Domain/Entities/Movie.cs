@@ -6,23 +6,23 @@ public sealed class Movie : BaseEntity
 {
     public string Title { get; private set; }
     public string Description { get; private set; }
-    public DateOnly ReleaseDate { get; private set; }
+    public DateTime ReleaseDate { get; private set; }
     public string? ImagePath { get; private set; }
     
     public int CategoryId { get; set; }
     public Category Category { get; set; }
 
-    public Movie(string title, string description, DateOnly releaseDate, string imagePath) : base()
+    public Movie(string title, string description, DateTime releaseDate, string imagePath) : base()
     {
         ValidateDomain(title, description, releaseDate, imagePath);
     }
     
-    public Movie(int id, string title, string description, DateOnly releaseDate, string imagePath) : base(id)
+    public Movie(int id, string title, string description, DateTime releaseDate, string imagePath) : base(id)
     {
         ValidateDomain(title, description, releaseDate, imagePath);
     }
     
-    public void Update(int id, string title, string description, DateOnly releaseDate, string imagePath)
+    public void Update(int id, string title, string description, DateTime releaseDate, string imagePath)
     {
         DomainExceptionValidation.When(id < 0,
             "Invalid Id value");
@@ -32,7 +32,7 @@ public sealed class Movie : BaseEntity
         ValidateDomain(title, description, releaseDate, imagePath);
     }
 
-    private void ValidateDomain(string title, string description, DateOnly releaseDate, string imagePath)
+    private void ValidateDomain(string title, string description, DateTime releaseDate, string imagePath)
     {
         DomainExceptionValidation.When(string.IsNullOrEmpty(title), 
             "Invalid title.\nTitle is required");

@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 using MoviesCatalog.Domain.Entities;
 
 namespace MoviesCatalog.Application.DTOs;
@@ -19,16 +21,17 @@ public class MovieDTO
     [MaxLength(200)]
     [DisplayName("Description")]
     public string Description { get; set; }
-    
+
     [Required(ErrorMessage = "The Release Date is Required")]
-    [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
     [DisplayName("Release Date")]
-    public DateOnly ReleaseDate { get; set; }
+    public DateTime ReleaseDate { get; set; } 
     
     [MaxLength(250)]
     [DisplayName("Movie Image")]
     public string? ImagePath { get; set; }
     
+    [JsonIgnore]
+    [IgnoreDataMember]
     public Category? Category { get; set; }
     
     [DisplayName("Categories")]
