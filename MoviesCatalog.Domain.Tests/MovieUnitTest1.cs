@@ -9,7 +9,7 @@ public class MovieUnitTest1
     [Fact(DisplayName = "Create Movie With Valid Parameters")]
     public void CrateMovie_WithValidParameters_ResultObjectValidState()
     {
-        Action action = () => new Movie(1, "Movie title", "Movie description", new DateOnly(), "Image path");
+        Action action = () => new Movie(1, "Movie title", "Movie description", new DateTime(), "Image path");
 
         action
             .Should()
@@ -19,7 +19,7 @@ public class MovieUnitTest1
     [Fact(DisplayName = "Create Movie With Negative Id")]
     public void CrateMovie_WithNegativeId_DomainException()
     {
-        Action action = () => new Movie(-1, "Movie title", "Movie description", new DateOnly(), "Image path");
+        Action action = () => new Movie(-1, "Movie title", "Movie description", new DateTime(), "Image path");
 
         action
             .Should()
@@ -30,7 +30,7 @@ public class MovieUnitTest1
     [Fact(DisplayName = "Create Movie With Missing Title Value")]
     public void CrateMovie_WithMissingTitleValue_DomainException()
     {
-        Action action = () => new Movie(1, "", "Movie description", new DateOnly(), "Image path");
+        Action action = () => new Movie(1, "", "Movie description", new DateTime(), "Image path");
 
         action
             .Should()
@@ -41,7 +41,7 @@ public class MovieUnitTest1
     [Fact(DisplayName = "Create Movie With Short Title Value")]
     public void CrateMovie_WithShortTitleValue_DomainException()
     {
-        Action action = () => new Movie(1, "Mo", "Movie description", new DateOnly(), "Image path");
+        Action action = () => new Movie(1, "Mo", "Movie description", new DateTime(), "Image path");
 
         action
             .Should()
@@ -52,7 +52,7 @@ public class MovieUnitTest1
     [Fact(DisplayName = "Create Movie With Missing Description Value")]
     public void CrateMovie_WithMissingDescriptionValue_DomainException()
     {
-        Action action = () => new Movie(1, "Movie title", "", new DateOnly(), "Image path");
+        Action action = () => new Movie(1, "Movie title", "", new DateTime(), "Image path");
 
         action
             .Should()
@@ -63,7 +63,7 @@ public class MovieUnitTest1
     [Fact(DisplayName = "Create Movie With Short Description Value")]
     public void CrateMovie_WithShortDescriptionValue_DomainException()
     {
-        Action action = () => new Movie(1, "Movie Title", "Movi", new DateOnly(), "Image path");
+        Action action = () => new Movie(1, "Movie Title", "Movi", new DateTime(), "Image path");
 
         action
             .Should()
@@ -74,7 +74,7 @@ public class MovieUnitTest1
     [Fact(DisplayName = "Create Movie With Null Image Path Value")]
     public void CrateMovie_WithNullImagePathValue_NoDomainException()
     {
-        Action action = () => new Movie(1, "Movie Title", "Movie description", new DateOnly(), null);
+        Action action = () => new Movie(1, "Movie Title", "Movie description", new DateTime(), null);
 
         action
             .Should()
@@ -84,7 +84,7 @@ public class MovieUnitTest1
     [Fact(DisplayName = "Create Movie With Null Image Path Value")]
     public void CrateMovie_WithNullImagePathValue_NoNullReferenceException()
     {
-        Action action = () => new Movie(1, "Movie Title", "Movie description", new DateOnly(), null);
+        Action action = () => new Movie(1, "Movie Title", "Movie description", new DateTime(), null);
 
         action
             .Should()
@@ -94,7 +94,7 @@ public class MovieUnitTest1
     [Fact(DisplayName = "Create Movie With Long Image Path Value")]
     public void CrateMovie_WithLongImagePathValue_DomainException()
     {
-        Action action = () => new Movie(1, "Movie Title", "Movie description", new DateOnly(), "Image pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage path1");
+        Action action = () => new Movie(1, "Movie Title", "Movie description", new DateTime(), "Image pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage pathImage path1");
 
         action
             .Should()
