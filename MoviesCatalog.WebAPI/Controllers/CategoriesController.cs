@@ -1,4 +1,5 @@
 using System.Collections;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MoviesCatalog.Application.DTOs;
 using MoviesCatalog.Application.Interfaces;
@@ -8,6 +9,7 @@ namespace MoviesCatalog.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
